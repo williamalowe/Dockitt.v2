@@ -2,9 +2,9 @@ import styles from './App.module.css';
 
 const App = () => {
   return (
-    <div>
-      
-    </div>
+    <main className={styles.app}>
+      hello
+    </main>
   )
 }
 
