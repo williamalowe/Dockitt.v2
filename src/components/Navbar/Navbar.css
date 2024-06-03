@@ -10,16 +10,17 @@
 #navbar > div:last-child {
   margin-left: auto;
 }
-.logoContainer {
+.logoContainer > a {
   display: flex;
   align-items: center;
   cursor: pointer;
+  text-decoration: none;
 }
-.logoContainer > div {
+.logoContainer > a > div {
   font-weight: 600;
   letter-spacing: 1px;
 }
-.logoContainer > div:first-child {
+.logoContainer > a > div:first-child {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,7 +31,7 @@
   color: var(--bg-primary);
   border-radius: 0.5rem;
 }
-.logoContainer > div:last-child {
+.logoContainer > a > div:last-child {
   font-size: 1.2rem;
 }
 .linksContainer {
