@@ -2,12 +2,14 @@
 
 :root {
 	--text-color: #1f1f1f;
-	--bg-color: #fff;
+	--bg-primary: #fff;
+	--bg-secondary: #ff204d33;
 }
 
 [data-theme="dark"] {
 	--text-color: #fff;
-	--bg-color: #1f1f1f;
+	--bg-primary: #1f1f1f;
+	--bg-secondary: #ff204d38;
 }
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126

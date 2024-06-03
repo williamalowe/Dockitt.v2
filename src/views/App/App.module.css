@@ -1,5 +1,11 @@
 .app {
   width: 100vw;
   min-height: 100vh;
-  background: var(--bg-color);
+}
+.backgroundWrapper {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
 }
