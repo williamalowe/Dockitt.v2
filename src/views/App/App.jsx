@@ -16,7 +16,6 @@ const App = () => {
           currentTheme={darkTheme}
           handleSwitch={() => setDarkTheme(!darkTheme)}
         />
-        <p>test</p>
       </main>
     </TaskProvider>
   );
