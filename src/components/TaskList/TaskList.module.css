@@ -1,0 +1,33 @@
+.list {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+.display {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  /* background: rgba(255, 0, 0, 0.16); */
+}
+.cards {
+  flex-grow: 1;
+  overflow: scroll;
+}
+.cards::-webkit-scrollbar {
+  display: none;
+}
+.arrow {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

@@ -5,6 +5,11 @@
 	--bg-primary: #fff;
 	--bg-secondary: #ff204d33;
 	--highlight-color: #FF204E;
+	--backlog: #FF204E;
+	--in-progress: #7520ff;
+	--under-review: #ffb820;
+	--completed: #20ff75;
+	--cancelled: #e520ff;
 }
 
 [data-theme="dark"] {
