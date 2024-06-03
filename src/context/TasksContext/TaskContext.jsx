@@ -5,7 +5,7 @@ const TaskContext = createContext();
 
 const TaskProvider = ({ children }) => {
   // Step 2: Set up state for tasks
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState(['test']);
 
   // Step 3: Define functions to manipulate tasks
   const addTask = (newTask) => setTasks([...tasks, newTask]);

@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import App from "../../views/App/App"
+import Tasks from "../../views/Tasks/Tasks"
 
 const Router = () => {
   const Router = createBrowserRouter([
@@ -14,7 +15,7 @@ const Router = () => {
         },
         {
           path: '/tasks',
-          element: <>Task List</>
+          element: <Tasks />
         },
         {
           path: '/dashboard',
