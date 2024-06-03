@@ -6,7 +6,6 @@ const App = () => {
 
   return (
     <main className={styles.app} data-theme={darkTheme ? 'dark' : 'light'}>
-      
     </main>
   )
 }
