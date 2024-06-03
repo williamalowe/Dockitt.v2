@@ -1,0 +1,28 @@
+.form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-bottom: 1rem;
+}
+.form > input {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1rem;
+  padding: 0.25rem 0;
+  background: #fff;
+  color: var(--text-color);
+  border: none;
+  border-bottom: 2px solid var(--text-color);
+}
+.addButton {
+  position: absolute;
+  bottom: -1.5rem;
+  left: calc(50% - 1.5rem);
+  width: 2rem;
+  height: 2rem;
+  background: var(--highlight-color);
+  border: none;
+  color: var(--bg-primary);
+  border-radius: 50%;
+  cursor: pointer;
+}

@@ -4,14 +4,14 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: var(--text-color);
-  opacity: 0.8;
+  background: var(--modal-color);
   display: grid;
   place-items: center;
   z-index: 100;
 }
 .modal {
-  width: 100px;
-  height: 100px;
   background: var(--bg-primary);
+  padding: 0.5rem;
+  border: 2px solid var(--highlight-color);
+  border-radius: 0.5rem;
 }

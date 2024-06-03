@@ -4,6 +4,7 @@
 	--text-color: #1f1f1f;
 	--bg-primary: #fff;
 	--bg-secondary: #ff204d33;
+	--modal-color: #1f1f1f7e;
 	--highlight-color: #FF204E;
 	--backlog: #FF204E;
 	--in-progress: #7520ff;
@@ -15,7 +16,6 @@
 [data-theme="dark"] {
 	--text-color: #fff;
 	--bg-primary: #1f1f1f;
-	--bg-secondary: #ff204d38;
 }
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
