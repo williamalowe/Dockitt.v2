@@ -4,6 +4,7 @@
 	--text-color: #1f1f1f;
 	--bg-primary: #fff;
 	--bg-secondary: #ff204d33;
+	--highlight-color: #FF204E;
 }
 
 [data-theme="dark"] {
