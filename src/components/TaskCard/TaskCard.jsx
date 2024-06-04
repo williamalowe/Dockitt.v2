@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 import { useTaskContext } from "../../context/TasksContext/TaskContext";
 
 const TaskCard = ({ header, date, description, tag, priority, status }) => {
-  const { deleteTask, updateStatus } = useTaskContext();
+  const { deleteTask, updateStatus, rollbackStatus } = useTaskContext();
   return (
     <div className={styles.card}>
       <div className={styles.tagContainer}>
@@ -26,9 +26,8 @@ const TaskCard = ({ header, date, description, tag, priority, status }) => {
         </p>
         {status !== "cancelled" ? (
           <div className={styles.buttons}>
-
             <motion.button
-              onClick={() => deleteTask(date)}
+              onClick={() => rollbackStatus(date)}
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}
             >
