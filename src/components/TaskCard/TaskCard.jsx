@@ -13,9 +13,12 @@ const TaskCard = ({ header, date, description, tag, priority, status }) => {
     useTaskContext();
   return (
     <div className={styles.card}>
-      <div className={styles.tagContainer}>
-        <h5>{tag}</h5>
-      </div>
+      {
+        tag &&
+        <div className={styles.tagContainer}>
+          <h5>{tag}</h5>
+        </div>
+      }
       <div className={styles.header}>
         <h3>{header}</h3>
         <h5>ID: {date}</h5>
