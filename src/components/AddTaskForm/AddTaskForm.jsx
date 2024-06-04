@@ -19,7 +19,7 @@ const AddTaskForm = ({ handleClose }) => {
       description: taskDescription,
       priority: taskPriority,
       tag: taskTag,
-      status: "cancelled",
+      status: "backlog",
     };
     addTask(newTask);
     handleClose();
