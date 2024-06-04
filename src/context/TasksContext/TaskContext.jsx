@@ -15,7 +15,7 @@ const TaskProvider = ({ children }) => {
 
   // Step 3: Define functions to manipulate tasks
   const addTask = (newTask) => setTasks([...tasks, newTask]);
-  const deleteTask = (taskId) => setTasks(tasks.filter((task) => task.id !== taskId));
+  const deleteTask = (taskId) => setTasks(tasks.filter((task) => task.date !== taskId));
   // const toggleTaskCompletion = (taskId) =>
   //   setTasks(tasks.map((task) => (task.id === taskId ? { ...task, completed: !task.completed } : task)));
 
