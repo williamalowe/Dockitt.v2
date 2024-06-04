@@ -8,9 +8,9 @@
 .form > input {
   font-family: "Nunito Sans", sans-serif;
   font-size: 1rem;
-  padding: 0.25rem 0;
+  padding: 0.25rem;
   background: #fff;
-  color: var(--text-color);
+  color: #1f1f1f;
   border: none;
   border-bottom: 2px solid var(--text-color);
 }
@@ -25,4 +25,9 @@
   color: var(--bg-primary);
   border-radius: 50%;
   cursor: pointer;
+}
+.prioritySelection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.25rem;
 }

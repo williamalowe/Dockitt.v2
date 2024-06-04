@@ -23,6 +23,10 @@ const Navbar = ({ currentTheme, handleSwitch }) => {
       </motion.div>
       <div className="linksContainer">
         <NavLink to={"/tasks"}>
+          All Tasks
+          <div></div>
+        </NavLink>
+        <NavLink to={"/tasks"}>
           Task List
           <div></div>
         </NavLink>
