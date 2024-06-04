@@ -61,6 +61,9 @@
   cursor: pointer;
 }
 .buttons > button:first-child {
+  color: var(--cancelled);
+}
+.buttons > button {
   color: var(--backlog);
 }
 .buttons > button:last-child {
