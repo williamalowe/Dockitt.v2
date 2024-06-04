@@ -1,0 +1,35 @@
+.item {
+  height: 1rem;
+  width: 100%;
+}
+.item > td {
+  flex: 1;
+  padding: 0.25rem;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+}
+.item > td > span {
+  background: var(--text-color);
+  color: var(--bg-primary);
+  font-weight: 800;
+  margin-left: 1rem;
+  padding: 0 0.5rem;
+  border-radius: 0.5rem;
+}
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+.buttons > button:first-child {
+  color: var(--cancelled);
+}
+.buttons > button {
+  color: var(--backlog);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.buttons > button:last-child {
+  color: var(--completed);
+}
