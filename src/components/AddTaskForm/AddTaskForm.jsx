@@ -6,7 +6,7 @@ import { useState } from "react";
 import { useTaskContext } from "../../context/TasksContext/TaskContext";
 
 const AddTaskForm = ({ handleClose }) => {
-  const { tasks, addTask } = useTaskContext();
+  const { addTask } = useTaskContext();
   const [taskTitle, setTaskTitle] = useState("");
   const [taskDescription, setTaskDescription] = useState("");
   const [taskPriority, setTaskPriority] = useState("low");
