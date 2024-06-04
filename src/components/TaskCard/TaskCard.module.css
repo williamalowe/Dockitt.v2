@@ -1,0 +1,66 @@
+.card {
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.5rem;
+  border: 2px solid var(--text-color);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 30px var(--bg-primary);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+.tagContainer {
+  position: absolute;
+  width: fit-content;
+  border: none;
+  border-left: 2px solid var(--text-color);
+  border-bottom: 2px solid var(--text-color);
+  border-bottom-left-radius: 0.5rem;
+  padding: 0.25rem;
+  top: 0;
+  right: 0;
+}
+.tagContainer > h5 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  width: 80%;
+}
+.header > h5 {
+  font-size: 0.75rem;
+}
+.card > p {
+  max-height: 100px;
+  overflow: scroll;
+}
+.card > p::-webkit-scrollbar {
+  display: none;
+}
+.lower {
+  display: flex;
+}
+.lower > p > span {
+  font-weight: 800;
+}
+.buttons {
+  margin-left: auto;
+}
+.buttons > button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.buttons > button:first-child {
+  color: var(--backlog);
+}
+.buttons > button:last-child {
+  color: var(--completed);
+}
+
