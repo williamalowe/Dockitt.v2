@@ -14,6 +14,14 @@
   border: none;
   border-bottom: 2px solid var(--text-color);
 }
+.form > textarea {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1rem;
+  padding: 0.25rem;
+  background: #fff;
+  color: #1f1f1f;
+  height: 100px;
+}
 .addButton {
   position: absolute;
   bottom: -1.5rem;

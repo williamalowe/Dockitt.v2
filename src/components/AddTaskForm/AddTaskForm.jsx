@@ -7,6 +7,7 @@ import { useTaskContext } from "../../context/TasksContext/TaskContext";
 
 const AddTaskForm = ({ handleClose }) => {
   const { tasks, addTask } = useTaskContext();
+  const [taskTitle, setTaskTitle] = useState("");
   const [taskDescription, setTaskDescription] = useState("");
   const [taskPriority, setTaskPriority] = useState("low");
   const [taskTag, setTaskTag] = useState("");
@@ -14,6 +15,7 @@ const AddTaskForm = ({ handleClose }) => {
   const submitNewTask = () => {
     const newTask = {
       date: Date.now(),
+      title: taskTitle,
       description: taskDescription,
       priority: taskPriority,
       tag: taskTag,
@@ -27,6 +29,12 @@ const AddTaskForm = ({ handleClose }) => {
     <form className={styles.form} onSubmit={(e) => e.preventDefault()}>
       <h3>Add New Task</h3>
       <input
+        type="text"
+        placeholder="Task Title"
+        value={taskTitle}
+        onChange={(e) => setTaskTitle(e.target.value)}
+      />
+      <textarea
         type="text"
         placeholder="Task Description"
         value={taskDescription}
