@@ -1,10 +1,8 @@
 import { createContext, useContext, useEffect, useState } from "react";
 
-// Step 1: Create a context
 const TaskContext = createContext();
 
 const TaskProvider = ({ children }) => {
-  // Step 2: Set up state for tasks
   const [tasks, setTasks] = useState(() => {
     return JSON.parse(localStorage.getItem("tasks")) || [];
   });
@@ -13,7 +11,6 @@ const TaskProvider = ({ children }) => {
     localStorage.setItem("tasks", JSON.stringify(tasks));
   }, [tasks]);
 
-  // Step 3: Define functions to manipulate tasks
   const addTask = (newTask) => setTasks([...tasks, newTask]);
 
   const deleteTask = (taskId) =>
@@ -70,13 +67,25 @@ const TaskProvider = ({ children }) => {
     };
     setTasks([...updatedList, updatedTask]);
   };
-  // const toggleTaskCompletion = (taskId) =>
-  //   setTasks(tasks.map((task) => (task.id === taskId ? { ...task, completed: !task.completed } : task)));
 
-  // Step 4: Provide the context and functions to the components
+  const cancelTask = (taskID) => {
+    let target = tasks.filter((task) => task.date === taskID);
+    let updatedList = tasks.filter((task) => task.date !== taskID);
+
+    let updatedTask = {
+      date: target[0].date,
+      title: target[0].title,
+      description: target[0].description,
+      priority: target[0].priority,
+      tag: target[0].tag,
+      status: 'cancelled',
+    };
+    setTasks([...updatedList, updatedTask]);
+  };
+
   return (
     <TaskContext.Provider
-      value={{ tasks, addTask, deleteTask, updateStatus, rollbackStatus }}
+      value={{ tasks, addTask, deleteTask, updateStatus, rollbackStatus, cancelTask }}
     >
       {children}
     </TaskContext.Provider>
