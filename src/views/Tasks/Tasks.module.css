@@ -1,8 +1,0 @@
-.tasks {
-  display: flex;
-  gap: 1rem;
-  height: 100%;
-}
-.tasks > div {
-  flex: 1;
-}

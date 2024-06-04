@@ -18,20 +18,18 @@ const TaskList = ({ header, color, tasksList }) => {
       </div>
       <div className={styles.display}>
         <div className={styles.cards}>
-          {
-            tasksList.map((task) => 
-            <TaskCard
-              key={task.date}
-              header={task.title}
-              date={task.date}
-              description={task.description}
-              tag={task.tag}
-              priority={task.priority}
-              status={task.status}
-           />
-            )
-          }
-
+          {tasksList.map((task) => (
+            <div key={task.date}>
+              <TaskCard
+                header={task.title}
+                date={task.date}
+                description={task.description}
+                tag={task.tag}
+                priority={task.priority}
+                status={task.status}
+              />
+            </div>
+          ))}
         </div>
         <div className={styles.arrow}>
           <FontAwesomeIcon icon={faCaretDown} />

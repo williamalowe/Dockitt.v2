@@ -1,6 +1,7 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom"
-import App from "../../views/App/App"
-import Tasks from "../../views/Tasks/Tasks"
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import App from "../../views/App/App";
+import Kanban from "../../views/Kanban/Kanban";
+import Tasks from "../../views/Tasks/Tasks";
 
 const Router = () => {
   const Router = createBrowserRouter([
@@ -11,11 +12,11 @@ const Router = () => {
       children: [
         {
           index: true,
-          element: <>Page</>
+          element: <Tasks />
         },
         {
-          path: '/tasks',
-          element: <Tasks />
+          path: '/kanban',
+          element: <Kanban />
         },
         {
           path: '/dashboard',

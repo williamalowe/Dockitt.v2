@@ -22,12 +22,12 @@ const Navbar = ({ currentTheme, handleSwitch }) => {
         </Link>
       </motion.div>
       <div className="linksContainer">
-        <NavLink to={"/tasks"}>
-          All Tasks
+        <NavLink to={"/"}>
+          Tasks List
           <div></div>
         </NavLink>
-        <NavLink to={"/tasks"}>
-          Task List
+        <NavLink to={"/kanban"}>
+          Kanban View
           <div></div>
         </NavLink>
         <NavLink to={"/dashboard"}>
