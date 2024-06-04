@@ -18,30 +18,20 @@ const TaskList = ({ header, color, tasksList }) => {
       </div>
       <div className={styles.display}>
         <div className={styles.cards}>
-          <TaskCard 
-            header={'Add Mobile Responsiveness'}
-            date={Date.now()}
-            description={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab et eveniet, hic odit illo deleniti blanditiis natus, atque reiciendis aut quia fugit aliquam molestias sit deserunt, tempore consequuntur. Error.'}
-            tag={'Styles'}
-            priority={'High'}
-            status={'backlog'}
-          />
-          <TaskCard 
-            header={'Add Mobile Responsiveness'}
-            date={Date.now()}
-            description={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab et eveniet, hic odit illo deleniti blanditiis natus, atque reiciendis aut quia fugit aliquam molestias sit deserunt, tempore consequuntur. Error.'}
-            tag={'Styles'}
-            priority={'High'}
-            status={'backlog'}
-          />
-          <TaskCard 
-            header={'Add Mobile Responsiveness'}
-            date={Date.now()}
-            description={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab et eveniet, hic odit illo deleniti blanditiis natus, atque reiciendis aut quia fugit aliquam molestias sit deserunt, tempore consequuntur. Error.'}
-            tag={'Styles'}
-            priority={'High'}
-            status={'backlog'}
-          />
+          {
+            tasksList.map((task) => 
+            <TaskCard
+              key={task.date}
+              header={task.title}
+              date={task.date}
+              description={task.description}
+              tag={task.tag}
+              priority={task.priority}
+              status={task.status}
+           />
+            )
+          }
+
         </div>
         <div className={styles.arrow}>
           <FontAwesomeIcon icon={faCaretDown} />

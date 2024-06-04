@@ -1,25 +1,35 @@
 import TaskList from "../../components/TaskList/TaskList";
+import { useTaskContext } from "../../context/TasksContext/TaskContext";
 import styles from "./Tasks.module.css";
 
 const Tasks = () => {
+  const { tasks } = useTaskContext();
   return (
     <div className={styles.tasks}>
-      <TaskList header={"Backlog"} color={"var(--backlog)"} tasksList={""} />
-      <TaskList header={"In Progress"} color={"var(--in-progress)"} />
+      <TaskList 
+        header={"Backlog"} 
+        color={"var(--backlog)"} 
+        tasksList={tasks.filter((task) => task.status === 'backlog')} 
+      />
+      <TaskList 
+      header={"In Progress"} 
+      color={"var(--in-progress)"}
+      tasksList={tasks.filter((task) => task.status === 'in progress')} 
+      />
       <TaskList
         header={"Under Review"}
         color={"var(--under-review)"}
-        tasksList={""}
+        tasksList={tasks.filter((task) => task.status === 'under review')} 
       />
       <TaskList
         header={"Completed"}
         color={"var(--completed)"}
-        tasksList={""}
+        tasksList={tasks.filter((task) => task.status === 'completed')} 
       />
       <TaskList
         header={"Cancelled"}
         color={"var(--cancelled)"}
-        tasksList={""}
+        tasksList={tasks.filter((task) => task.status === 'cancelled')} 
       />
     </div>
   );
