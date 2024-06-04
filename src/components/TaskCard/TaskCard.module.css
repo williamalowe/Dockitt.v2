@@ -63,4 +63,11 @@
 .buttons > button:last-child {
   color: var(--completed);
 }
+.cancel {
+  margin-left: auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--backlog);
+}
 

@@ -24,6 +24,23 @@ const TaskList = ({ header, color, tasksList }) => {
             description={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab et eveniet, hic odit illo deleniti blanditiis natus, atque reiciendis aut quia fugit aliquam molestias sit deserunt, tempore consequuntur. Error.'}
             tag={'Styles'}
             priority={'High'}
+            status={'backlog'}
+          />
+          <TaskCard 
+            header={'Add Mobile Responsiveness'}
+            date={Date.now()}
+            description={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab et eveniet, hic odit illo deleniti blanditiis natus, atque reiciendis aut quia fugit aliquam molestias sit deserunt, tempore consequuntur. Error.'}
+            tag={'Styles'}
+            priority={'High'}
+            status={'backlog'}
+          />
+          <TaskCard 
+            header={'Add Mobile Responsiveness'}
+            date={Date.now()}
+            description={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab et eveniet, hic odit illo deleniti blanditiis natus, atque reiciendis aut quia fugit aliquam molestias sit deserunt, tempore consequuntur. Error.'}
+            tag={'Styles'}
+            priority={'High'}
+            status={'backlog'}
           />
         </div>
         <div className={styles.arrow}>

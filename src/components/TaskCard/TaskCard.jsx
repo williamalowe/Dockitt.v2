@@ -1,9 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./TaskCard.module.css";
-import { faCaretLeft, faCaretRight } from "@fortawesome/free-solid-svg-icons";
+import { faCaretLeft, faCaretRight, faX } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
 
-const TaskCard = ({ header, date, description, tag, priority }) => {
+const TaskCard = ({ header, date, description, tag, priority, status }) => {
   return (
     <div className={styles.card}>
       <div className={styles.tagContainer}>
@@ -18,7 +18,9 @@ const TaskCard = ({ header, date, description, tag, priority }) => {
         <p>
           Priority: <span>{priority}</span>
         </p>
-        <div className={styles.buttons}>
+        {
+          status !== 'cancelled' ? 
+          <div className={styles.buttons}>
           <motion.button 
           whileHover={{ scale: 1.2 }} 
           whileTap={{ scale: 0.9 }}>
@@ -30,6 +32,15 @@ const TaskCard = ({ header, date, description, tag, priority }) => {
             <FontAwesomeIcon icon={faCaretRight} />
           </motion.button>
         </div>
+        :
+        <motion.button 
+          className={styles.cancel}
+          whileHover={{ scale: 1.2 }} 
+          whileTap={{ scale: 0.9 }}>
+            <FontAwesomeIcon icon={faX} />
+        </motion.button>
+        }
+        
       </div>
     </div>
   );
