@@ -1,0 +1,33 @@
+.filter {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem
+}
+.display {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+.display > svg {
+  transition: transform 0.3s ease-in-out;
+}
+.dropdown {
+  margin-top: 0.5rem;
+  position: absolute;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--text-color);
+  background: var(--bg-primary);
+  border-radius: 0.5rem;
+}
+.dropdown > button {
+  padding: 0.5rem;
+  text-align: left;
+  font-size: 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
