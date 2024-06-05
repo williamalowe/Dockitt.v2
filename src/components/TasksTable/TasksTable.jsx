@@ -1,6 +1,8 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useTaskContext } from "../../context/TasksContext/TaskContext";
 import TableItem from "../TableItem/TableItem";
 import styles from "./TasksTable.module.css";
+import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
 const TasksTable = () => {
   const { tasks } = useTaskContext();
@@ -19,6 +21,9 @@ const TasksTable = () => {
             priority={task.priority}
           />
         ))}
+      </div>
+      <div className={styles.arrow}>
+        <FontAwesomeIcon icon={faCaretDown} />
       </div>
     </div>
   );
