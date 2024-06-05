@@ -6,30 +6,29 @@ const TasksTable = () => {
   const { tasks } = useTaskContext();
 
   return (
-    <div className={styles.wrapper}>
-      <table className={styles.table}>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Task</th>
-            <th>Status</th>
-            <th>Priority</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          {tasks.map((task) => (
-            <TableItem
-              key={task.date}
-              id={task.date}
-              task={task.title}
-              tag={task.tag}
-              status={task.status}
-              priority={task.priority}
-            />
-          ))}
-        </tbody>
-      </table>
+    <div className={styles.table}>
+      <TableItem 
+        id='id'
+        task='task'
+        status='status'
+        priority='priority'
+      />
+      <div className={styles.tasks}>
+      <TableItem 
+        id='id2'
+        tag='tag'
+        task='task'
+        status='status'
+        priority='priority'
+      />
+      <TableItem 
+        id='id2'
+        tag='tag'
+        task='task'
+        status='status'
+        priority='priority'
+      />
+      </div>
     </div>
   );
 };

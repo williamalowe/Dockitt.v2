@@ -1,34 +1,32 @@
 .item {
-  height: 1rem;
-  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  border: 2px solid var(--text-color);
+  border-top: none;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
-.item > td {
+.id, .description {
+  flex: 2;
+}
+.status, .priority {
   flex: 1;
-  padding: 0.25rem;
-  font-size: 0.8rem;
-  text-transform: capitalize;
-}
-.item > td > span {
-  background: var(--text-color);
-  color: var(--bg-primary);
-  font-weight: 800;
-  margin-left: 1rem;
-  padding: 0 0.5rem;
-  border-radius: 0.5rem;
 }
 .buttons {
+  flex: 1;
   display: flex;
   justify-content: flex-end;
   gap: 0.5rem;
 }
-.buttons > button:first-child {
-  color: var(--cancelled);
-}
 .buttons > button {
-  color: var(--backlog);
   background: none;
   border: none;
+  color: var(--backlog);
   cursor: pointer;
+}
+.buttons > button:first-child {
+  color: var(--cancelled);
 }
 .buttons > button:last-child {
   color: var(--completed);
