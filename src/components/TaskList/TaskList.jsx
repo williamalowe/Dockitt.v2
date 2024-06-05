@@ -18,7 +18,9 @@ const TaskList = ({ header, color, tasksList, count }) => {
       </div>
       <div className={styles.display}>
         <div className={styles.cards}>
-          {tasksList.map((task) => (
+          {
+            tasksList.length > 0 ?
+          tasksList.map((task) => (
             <div key={task.date}>
               <TaskCard
                 header={task.title}
@@ -29,7 +31,12 @@ const TaskList = ({ header, color, tasksList, count }) => {
                 status={task.status}
               />
             </div>
-          ))}
+          ))
+          :
+                <div className={styles.empty}>
+                  No Tasks
+                </div>
+          }
         </div>
         <div className={styles.arrow}>
           <FontAwesomeIcon icon={faCaretDown} />
