@@ -30,4 +30,9 @@
   border: none;
   background: none;
   cursor: pointer;
+  color: var(--text-color);
+  transition: background 0.2s ease-in-out;
+}
+.dropdown > button:hover {
+  background: var(--highlight-color);
 }
