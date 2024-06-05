@@ -16,7 +16,8 @@ const TableItem = ({ id, task, tag, status, priority }) => {
     <div className={styles.item}>
       <div className={styles.id}>
         <p>
-          {id} <span>{tag}</span>
+          {id} 
+          <span>{tag}</span>
         </p>
       </div>
       <div className={styles.description}>

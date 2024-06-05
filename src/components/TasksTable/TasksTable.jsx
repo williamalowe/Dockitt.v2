@@ -14,20 +14,18 @@ const TasksTable = () => {
         priority='priority'
       />
       <div className={styles.tasks}>
-      <TableItem 
-        id='id2'
-        tag='tag'
-        task='task'
-        status='status'
-        priority='priority'
-      />
-      <TableItem 
-        id='id2'
-        tag='tag'
-        task='task'
-        status='status'
-        priority='priority'
-      />
+      {
+        tasks.map((task) => 
+        <TableItem 
+          key={task.date}
+          id={task.date}
+          task={task.title}
+          tag={task.tag}
+          status={task.status}
+          priority={task.priority}
+        />
+        )
+      }
       </div>
     </div>
   );

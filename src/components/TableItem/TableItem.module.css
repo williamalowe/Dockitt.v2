@@ -13,6 +13,14 @@
 .status, .priority {
   flex: 1;
 }
+.id > p > span {
+  font-size: 0.8rem;
+  padding: 0 0.5rem;
+  background: var(--highlight-color);
+  margin-left: 1rem;
+  border-radius: 0.5rem;
+  color: var(--bg-primary);
+}
 .buttons {
   flex: 1;
   display: flex;
