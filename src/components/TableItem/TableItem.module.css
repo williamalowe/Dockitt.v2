@@ -7,10 +7,12 @@
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
 }
-.id, .description {
+.id,
+.description {
   flex: 2;
 }
-.status, .priority {
+.status,
+.priority {
   flex: 1;
 }
 .id > p > span {
