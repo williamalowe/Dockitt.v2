@@ -30,12 +30,14 @@ const AddTaskForm = ({ handleClose }) => {
       <h3>Add New Task</h3>
       <input
         type="text"
+        name="task_title"
         placeholder="Task Title"
         value={taskTitle}
         onChange={(e) => setTaskTitle(e.target.value)}
       />
       <textarea
         type="text"
+        name="task_description"
         placeholder="Task Description"
         value={taskDescription}
         onChange={(e) => setTaskDescription(e.target.value)}
@@ -46,44 +48,48 @@ const AddTaskForm = ({ handleClose }) => {
           <input
             type="radio"
             name="priority"
+            id="low_priority"
             value="low"
             defaultChecked
             onChange={(e) => setTaskPriority(e.target.value)}
           />
-          <label htmlFor="priority">Low</label>
+          <label htmlFor="low_priority">Low</label>
         </div>
         <div className={styles.priorityOption}>
           <input
             type="radio"
             name="priority"
+            id="medium_priority"
             value="medium"
             onChange={(e) => setTaskPriority(e.target.value)}
           />
-          <label htmlFor="priority">Medium</label>
+          <label htmlFor="medium_priority">Medium</label>
         </div>
         <div className={styles.priorityOption}>
           <input
             type="radio"
             name="priority"
+            id="high_priority"
             value="high"
             onChange={(e) => setTaskPriority(e.target.value)}
           />
-          <label htmlFor="priority">High</label>
+          <label htmlFor="high_priority">High</label>
         </div>
         <div className={styles.priorityOption}>
           <input
             type="radio"
             name="priority"
+            id="critical_priority"
             value="critical"
             onChange={(e) => setTaskPriority(e.target.value)}
           />
-          <label htmlFor="priority">Critical</label>
+          <label htmlFor="critical_priority">Critical</label>
         </div>
-        <label htmlFor="">Low</label>
       </div>
       <input
         type="text"
         placeholder="Tag (optional)"
+        name="task_tag"
         value={taskTag}
         onChange={(e) => setTaskTag(e.target.value)}
       />
