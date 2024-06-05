@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 import TaskCard from "../TaskCard/TaskCard";
 
-const TaskList = ({ header, color, tasksList }) => {
+const TaskList = ({ header, color, tasksList, count }) => {
   const headerRef = useRef(0);
 
   useEffect(() => {
@@ -14,7 +14,7 @@ const TaskList = ({ header, color, tasksList }) => {
   return (
     <div className={styles.list}>
       <div className={styles.header} ref={headerRef}>
-        <h5>{header}</h5>
+        <h5>{header} - {count}</h5>
       </div>
       <div className={styles.display}>
         <div className={styles.cards}>

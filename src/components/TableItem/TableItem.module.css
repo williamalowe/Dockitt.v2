@@ -23,6 +23,7 @@
   margin-left: 1rem;
   border-radius: 0.5rem;
   color: var(--bg-primary);
+  text-transform: lowercase;
 }
 .buttons {
   flex: 1;
