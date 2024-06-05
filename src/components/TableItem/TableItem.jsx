@@ -4,6 +4,8 @@ import styles from "./TableItem.module.css";
 import {
   faCaretLeft,
   faCaretRight,
+  faCheck,
+  faWeight,
   faX,
 } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
@@ -13,7 +15,12 @@ const TableItem = ({ id, task, tag, status, priority }) => {
     useTaskContext();
 
   return (
-    <div className={styles.item}>
+    <motion.div
+      className={styles.item}
+      whileHover={{
+        fontWeight: 800,
+      }}
+    >
       <div className={styles.id}>
         <p>
           {id}
@@ -30,61 +37,94 @@ const TableItem = ({ id, task, tag, status, priority }) => {
         <p>{priority}</p>
       </div>
       <div className={styles.buttons}>
-        {id !== "id" && (
+        {status === "cancelled" ? (
           <>
-            {status === "cancelled" ? (
-              <motion.button
-                onClick={() => deleteTask(id)}
-                whileHover={{
-                  scale: 1.2,
-                }}
-                whileTap={{
-                  scale: 0.9,
-                }}
-              >
-                <FontAwesomeIcon icon={faX} />
-              </motion.button>
-            ) : (
-              <>
-                <motion.button
-                  onClick={() => cancelTask(id)}
-                  whileHover={{
-                    scale: 1.2,
-                  }}
-                  whileTap={{
-                    scale: 0.9,
-                  }}
-                >
-                  <FontAwesomeIcon icon={faX} />
-                </motion.button>
-                <motion.button
-                  onClick={() => rollbackStatus(id)}
-                  whileHover={{
-                    scale: 1.2,
-                  }}
-                  whileTap={{
-                    scale: 0.9,
-                  }}
-                >
-                  <FontAwesomeIcon icon={faCaretLeft} />
-                </motion.button>
-                <motion.button
-                  onClick={() => updateStatus(id)}
-                  whileHover={{
-                    scale: 1.2,
-                  }}
-                  whileTap={{
-                    scale: 0.9,
-                  }}
-                >
-                  <FontAwesomeIcon icon={faCaretRight} />
-                </motion.button>
-              </>
-            )}
+            <motion.button
+              className={styles.rollbackButton}
+              onClick={() => deleteTask(id)}
+              whileHover={{
+                scale: 1.2,
+              }}
+              whileTap={{
+                scale: 0.9,
+              }}
+            >
+              <FontAwesomeIcon icon={faX} />
+            </motion.button>
           </>
+        ) : status === "completed" ? (
+          <>
+            <motion.button
+              className={styles.rollbackButton}
+              onClick={() => rollbackStatus(id)}
+              whileHover={{
+                scale: 1.2,
+              }}
+              whileTap={{
+                scale: 0.9,
+              }}
+            >
+              <FontAwesomeIcon icon={faCaretLeft} />
+            </motion.button>
+            <motion.button
+              className={styles.updateButton}
+              onClick={() => deleteTask(id)}
+              whileHover={{
+                scale: 1.2,
+              }}
+              whileTap={{
+                scale: 0.9,
+              }}
+            >
+              <FontAwesomeIcon icon={faCheck} />
+            </motion.button>
+          </>
+        ) : status === "backlog" ||
+          status === "in progress" ||
+          status === "under review" ? (
+          <>
+            <motion.button
+              className={styles.cancelButton}
+              onClick={() => cancelTask(id)}
+              whileHover={{
+                scale: 1.2,
+              }}
+              whileTap={{
+                scale: 0.9,
+              }}
+            >
+              <FontAwesomeIcon icon={faX} />
+            </motion.button>
+            <motion.button
+              className={styles.rollbackButton}
+              onClick={() => rollbackStatus(id)}
+              whileHover={{
+                scale: 1.2,
+              }}
+              whileTap={{
+                scale: 0.9,
+              }}
+            >
+              <FontAwesomeIcon icon={faCaretLeft} />
+            </motion.button>
+            <motion.button
+              className={styles.updateButton}
+              onClick={() => updateStatus(id)}
+              whileHover={{
+                scale: 1.2,
+              }}
+              whileTap={{
+                scale: 0.9,
+              }}
+            >
+              <FontAwesomeIcon icon={faCaretRight} />
+            </motion.button>
+          </>
+        ) : (
+          <></>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

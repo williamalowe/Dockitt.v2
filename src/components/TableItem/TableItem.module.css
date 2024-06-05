@@ -6,6 +6,7 @@
   border-top: none;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
+  text-transform: capitalize;
 }
 .id,
 .description {
@@ -32,12 +33,14 @@
 .buttons > button {
   background: none;
   border: none;
-  color: var(--backlog);
   cursor: pointer;
 }
-.buttons > button:first-child {
+.cancelButton {
   color: var(--cancelled);
 }
-.buttons > button:last-child {
+.rollbackButton {
+  color: var(--backlog);
+}
+.updateButton {
   color: var(--completed);
 }
