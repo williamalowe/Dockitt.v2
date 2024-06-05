@@ -5,6 +5,9 @@
   gap: 0.5rem;
   padding-bottom: 1rem;
 }
+.form > h3 {
+  text-align: center;
+}
 .form > input {
   font-family: "Nunito Sans", sans-serif;
   font-size: 1rem;
@@ -12,12 +15,13 @@
   background: #fff;
   color: #1f1f1f;
   border: none;
-  border-bottom: 2px solid var(--text-color);
+  border-bottom: 1px solid var(--text-color);
 }
 .form > textarea {
   font-family: "Nunito Sans", sans-serif;
   font-size: 1rem;
   padding: 0.25rem;
+  border-radius: 0.5rem;
   background: #fff;
   color: #1f1f1f;
   height: 100px;
