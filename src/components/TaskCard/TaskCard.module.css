@@ -17,11 +17,9 @@
   width: fit-content;
   max-width: 4rem;
   height: 0.75rem;
-  border: none;
-  border-left: 2px solid var(--text-color);
-  border-bottom: 2px solid var(--text-color);
   border-bottom-left-radius: 0.5rem;
   padding: 0.25rem;
+  background: var(--text-color);
   top: 0;
   right: 0;
   overflow: hidden;
@@ -29,6 +27,7 @@
 .tagContainer > h5 {
   font-size: 0.8rem;
   text-transform: uppercase;
+  color: var(--bg-primary);
 }
 .header {
   display: flex;
