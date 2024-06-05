@@ -19,7 +19,9 @@
   flex-grow: 1;
 }
 .cards {
+  box-sizing: border-box;
   height: 70vh;
+  padding: 0.5rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;

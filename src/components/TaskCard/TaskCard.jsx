@@ -13,7 +13,12 @@ const TaskCard = ({ header, date, description, tag, priority, status }) => {
   const { deleteTask, updateStatus, rollbackStatus, cancelTask } =
     useTaskContext();
   return (
-    <div className={styles.card}>
+    <motion.div
+      className={styles.card}
+      whileHover={{
+        rotate: -2,
+      }}
+    >
       {tag && (
         <div className={styles.tagContainer}>
           <h5>{tag}</h5>
@@ -114,7 +119,7 @@ const TaskCard = ({ header, date, description, tag, priority, status }) => {
           </div>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
