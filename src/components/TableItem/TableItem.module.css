@@ -7,6 +7,7 @@
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   text-transform: capitalize;
+  cursor: pointer;
 }
 .id,
 .description {
