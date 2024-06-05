@@ -47,7 +47,7 @@ const AddTaskForm = ({ handleClose }) => {
             type="radio"
             name="priority"
             value="low"
-            checked="checked"
+            defaultChecked
             onChange={(e) => setTaskPriority(e.target.value)}
           />
           <label htmlFor="priority">Low</label>
