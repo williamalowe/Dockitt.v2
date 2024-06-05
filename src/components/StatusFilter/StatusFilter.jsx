@@ -4,12 +4,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import { AnimatePresence, motion } from 'framer-motion';
 
-const StatusFilter = () => {
+const StatusFilter = ({ handleSelect }) => {
   const [showing, setShowing] = useState('All Tasks')
   const [showDropdown, setShowDropdown] = useState(false);
   const caretRef = useRef(null);
 
   const handleClick = (target) => {
+    handleSelect(target);
     setShowing(target);
     setShowDropdown(false);
   }

@@ -1,17 +1,15 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useTaskContext } from "../../context/TasksContext/TaskContext";
 import TableItem from "../TableItem/TableItem";
 import styles from "./TasksTable.module.css";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
-const TasksTable = () => {
-  const { tasks } = useTaskContext();
+const TasksTable = ({ taskslist }) => {
 
   return (
     <div className={styles.table}>
       <TableItem id="id" task="task" status="status" priority="priority" />
       <div className={styles.tasks}>
-        {tasks.map((task) => (
+        {taskslist.map((task) => (
           <TableItem
             key={task.date}
             id={task.date}
