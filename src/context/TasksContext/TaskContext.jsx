@@ -55,6 +55,8 @@ const TaskProvider = ({ children }) => {
       status = "in progress";
     } else if (target[0].status === "completed") {
       status = "under review";
+    } else if (target[0].status === "cancelled") {
+      status = "backlog";
     }
 
     let updatedTask = {

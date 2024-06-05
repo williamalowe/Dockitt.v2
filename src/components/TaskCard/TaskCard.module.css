@@ -60,13 +60,13 @@
   border: none;
   cursor: pointer;
 }
-.buttons > button:first-child {
+.cancelButton {
   color: var(--cancelled);
 }
-.buttons > button {
+.rollbackButton {
   color: var(--backlog);
 }
-.buttons > button:last-child {
+.updateButton {
   color: var(--completed);
 }
 .cancel {
@@ -76,4 +76,3 @@
   cursor: pointer;
   color: var(--backlog);
 }
-
