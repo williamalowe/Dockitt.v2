@@ -1,11 +1,14 @@
 .chartItem {
+  box-sizing: border-box;
+  width: 100%;
   border: 2px solid var(--text-color);
   border-radius: 5rem;
-  height: 1.5rem;
+  height: 2rem;
   padding: 0.25rem;
   position: relative;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
+  cursor: pointer;
 }
 .header {
   z-index: 100;
@@ -16,7 +19,7 @@
   display: flex;
   align-items: center;
 }
-.fill > h5{
+.fill > h5 {
   position: absolute;
   margin-left: 0.5rem;
 }
