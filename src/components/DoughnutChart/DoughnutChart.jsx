@@ -7,6 +7,7 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 const DoughnutChart = () => {
   const { tasks } = useTaskContext();
+
   const data = {
     labels: ['Backlog', 'In Progress', 'Under Review', 'Completed'],
     datasets: [

@@ -38,7 +38,7 @@ const BarChart = () => {
   const labels = ["Backlog", "In Progress", "Under Review", "Completed"];
 
   const data = {
-    labels,
+    labels: labels,
     datasets: [
       {
         label: "Tasks",
