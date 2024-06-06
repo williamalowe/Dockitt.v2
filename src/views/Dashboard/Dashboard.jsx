@@ -1,3 +1,4 @@
+import BarChart from '../../components/BarChart/BarChart';
 import DashboardProgressChart from '../../components/DashboardProgressChart/DashboardProgressChart';
 import DashboardTally from '../../components/DashboardTally/DashboardTally';
 import DoughnutChart from '../../components/DoughnutChart/DoughnutChart';
@@ -10,7 +11,7 @@ const Dashboard = () => {
         <DashboardProgressChart />
         <DoughnutChart />
         <div></div>
-        <div></div>
+        <BarChart />
       </div>
       <div className={styles.right}>
         <DashboardTally />
