@@ -23,12 +23,7 @@
   flex-direction: column;
   gap: 0.5rem;
 }
-.right > div:first-child {
-  height: 100px;
-}
-.right > div {
-  border: 1px solid black;
-}
 .right > div:last-child {
   flex-grow: 1;
+  border: 1px solid black;
 }

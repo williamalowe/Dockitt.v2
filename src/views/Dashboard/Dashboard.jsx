@@ -1,3 +1,4 @@
+import DashboardTally from '../../components/DashboardTally/DashboardTally';
 import styles from './Dashboard.module.css';
 
 const Dashboard = () => {
@@ -10,7 +11,7 @@ const Dashboard = () => {
         <div></div>
       </div>
       <div className={styles.right}>
-        <div></div>
+        <DashboardTally />
         <div></div>
       </div>
     </div>
