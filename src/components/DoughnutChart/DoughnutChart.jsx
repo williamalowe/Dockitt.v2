@@ -35,7 +35,10 @@ const DoughnutChart = () => {
       <Doughnut 
         data={data}
         width={"100%"}
-        options={{ maintainAspectRatio: false }}
+        options={{ 
+          maintainAspectRatio: false,
+          responsive: true
+        }}
       />
     </div>
   )
