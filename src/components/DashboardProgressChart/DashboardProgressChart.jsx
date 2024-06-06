@@ -1,14 +1,14 @@
 import { useTaskContext } from "../../context/TasksContext/TaskContext";
-import BarChartItem from "../BarChartItem/BarChartItem";
-import styles from "./DashboardBarChart.module.css";
+import ProgressionBar from "../ProgressionBar/ProgressionBar";
+import styles from "./DashboardProgressChart.module.css";
 
-const DashboardBarChart = () => {
+const DashboardProgressChart = () => {
   const { tasks } = useTaskContext();
   const totalTasks = tasks.filter((task) => task.status !== "cancelled").length;
 
   return (
-    <div className={styles.barChart}>
-      <BarChartItem
+    <div className={styles.progressChart}>
+      <ProgressionBar
         header="Backlog"
         percentage={Math.floor(
           (tasks.filter((task) => task.status === "backlog").length /
@@ -17,7 +17,7 @@ const DashboardBarChart = () => {
         )}
         color="var(--backlog)"
       />
-      <BarChartItem
+      <ProgressionBar
         header="In Progress"
         percentage={Math.floor(
           (tasks.filter((task) => task.status === "in progress").length /
@@ -26,7 +26,7 @@ const DashboardBarChart = () => {
         )}
         color="var(--in-progress)"
       />
-      <BarChartItem
+      <ProgressionBar
         header="Under Review"
         percentage={Math.floor(
           (tasks.filter((task) => task.status === "under review").length /
@@ -35,7 +35,7 @@ const DashboardBarChart = () => {
         )}
         color="var(--under-review)"
       />
-      <BarChartItem
+      <ProgressionBar
         header="Completed"
         percentage={Math.floor(
           (tasks.filter((task) => task.status === "completed").length /
@@ -48,4 +48,4 @@ const DashboardBarChart = () => {
   );
 };
 
-export default DashboardBarChart;
+export default DashboardProgressChart;

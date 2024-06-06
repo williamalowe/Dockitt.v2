@@ -1,8 +1,8 @@
 import { useRef, useEffect } from "react";
-import styles from "./BarChartItem.module.css";
+import styles from "./ProgressionBar.module.css";
 import { motion } from "framer-motion";
 
-const BarChartItem = ({ header, percentage, color }) => {
+const ProgressionBar = ({ header, percentage, color }) => {
   const fillRef = useRef(null);
 
   useEffect(() => {
@@ -11,7 +11,7 @@ const BarChartItem = ({ header, percentage, color }) => {
   }, [percentage]);
   return (
     <motion.div
-      className={styles.chartItem}
+      className={styles.progression}
       whileHover={{
         scale: 1.1,
       }}
@@ -25,4 +25,4 @@ const BarChartItem = ({ header, percentage, color }) => {
   );
 };
 
-export default BarChartItem;
+export default ProgressionBar;
