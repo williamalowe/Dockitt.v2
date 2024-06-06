@@ -23,3 +23,32 @@
   position: absolute;
   margin-left: 0.5rem;
 }
+.allFill {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.backlogFill {
+  composes: allFill;
+  border-top-left-radius: 5rem;
+  border-bottom-left-radius: 5rem;
+  background: var(--backlog);
+  width: 10%;
+}
+.inProgressFill {
+  composes: allFill;
+  background: var(--in-progress);
+  width: 10%;
+}
+.underReviewFill {
+  composes: allFill;
+  background: var(--under-review);
+  width: 10%;
+}
+.completedFill {
+  composes: allFill;
+  border-top-right-radius: 5rem;
+  border-bottom-right-radius: 5rem;
+  background: var(--completed);
+  width: 10%;
+}
