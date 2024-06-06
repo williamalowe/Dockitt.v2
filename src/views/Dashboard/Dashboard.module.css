@@ -15,9 +15,6 @@
   grid-template-rows: 1fr 1fr;
   gap: 0.5rem;
 }
-.left > div:not(:nth-child(1)), .left > div:not(:nth-child(2))  {
-  border: 1px solid black;
-}
 .right {
   flex: 1;
   display: flex;
