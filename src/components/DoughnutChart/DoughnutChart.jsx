@@ -24,7 +24,8 @@ const DoughnutChart = () => {
           '#ffb820',
           '#20ff75'
         ],
-        borderWidth: 4,
+        borderWidth: 2,
+        hoverOffset: 10
       },
     ],
   };
