@@ -1,5 +1,6 @@
 import DashboardBarChart from '../../components/DashboardBarChart/DashboardBarChart';
 import DashboardTally from '../../components/DashboardTally/DashboardTally';
+import DoughnutChart from '../../components/DoughnutChart/DoughnutChart';
 import styles from './Dashboard.module.css';
 
 const Dashboard = () => {
@@ -7,7 +8,7 @@ const Dashboard = () => {
     <div className={styles.dashboard}>
       <div className={styles.left}>
         <DashboardBarChart />
-        <div></div>
+        <DoughnutChart />
         <div></div>
         <div></div>
       </div>
