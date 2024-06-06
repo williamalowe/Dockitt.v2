@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "../../views/App/App";
 import Kanban from "../../views/Kanban/Kanban";
 import Tasks from "../../views/Tasks/Tasks";
+import Dashboard from "../../views/Dashboard/Dashboard";
 
 const Router = () => {
   const Router = createBrowserRouter([
@@ -20,7 +21,7 @@ const Router = () => {
         },
         {
           path: '/dashboard',
-          element: <>Dashboard</>
+          element: <Dashboard />
         }
       ] 
     }
