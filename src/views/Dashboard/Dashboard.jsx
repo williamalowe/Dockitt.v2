@@ -1,3 +1,4 @@
+import DashboardBarChart from '../../components/DashboardBarChart/DashboardBarChart';
 import DashboardTally from '../../components/DashboardTally/DashboardTally';
 import styles from './Dashboard.module.css';
 
@@ -5,7 +6,7 @@ const Dashboard = () => {
   return (
     <div className={styles.dashboard}>
       <div className={styles.left}>
-        <div></div>
+        <DashboardBarChart />
         <div></div>
         <div></div>
         <div></div>
