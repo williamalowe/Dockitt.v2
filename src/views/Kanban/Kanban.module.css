@@ -10,6 +10,11 @@
   display: none;
   gap: 0.5rem;
   flex-direction: column;
+  overflow: scroll;
+  height: 80vh;
+}
+.mobile::-webkit-scrollbar {
+  display: none;
 }
 .buttons {
   display: flex;
@@ -30,7 +35,5 @@
   }
   .mobile {
     display: flex;
-    border: 1px solid black;
-    height: 100%;
   }
 }

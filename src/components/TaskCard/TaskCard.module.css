@@ -86,7 +86,11 @@
 
 @media screen and (max-width: 768px) {
   .card {
+    aspect-ratio: 1/1;
     height: 100%;
+  }
+  .card > p {
+    display: none;
   }
   .lower {
     margin-top: auto;
