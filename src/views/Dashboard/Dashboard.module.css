@@ -26,5 +26,22 @@
 }
 .right > div:last-child {
   flex-grow: 1;
-  /* border: 1px solid black; */
+}
+.mobile {
+  height: 75vh;
+  display: none;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+
+  overflow: scroll;
+}
+/* Mobile View */
+@media screen and (max-width: 768px){
+  .left, .right {
+    display: none;
+  }
+  .mobile {
+    display: flex;
+  }
 }

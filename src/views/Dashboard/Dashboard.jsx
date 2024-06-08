@@ -19,6 +19,14 @@ const Dashboard = () => {
         <DashboardTally />
         <UpdatesBoard />
       </div>
+      <div className={styles.mobile}>
+        <DashboardTally />
+        <DashboardProgressChart />
+        <DoughnutChart />
+        <LineChart />
+        <BarChart />
+        <UpdatesBoard />
+      </div>
     </div>
   )
 }
