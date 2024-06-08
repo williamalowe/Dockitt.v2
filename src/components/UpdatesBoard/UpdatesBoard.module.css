@@ -17,7 +17,6 @@
 }
 .updateList {
   flex-grow: 1;
-  overflow: scroll;
 }
 .updateList::-webkit-scrollbar {
   display: none;
