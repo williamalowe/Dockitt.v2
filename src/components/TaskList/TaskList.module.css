@@ -1,5 +1,6 @@
 .list {
-  height: 100%;
+  box-sizing: border-box;
+  max-height: calc(100vh - 160px);
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -8,7 +9,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 2rem;
+  min-height: 2rem;
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
 }
@@ -17,15 +18,17 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  overflow: scroll;
+}
+.display::-webkit-scrollbar {
+  display: none;
 }
 .cards {
   box-sizing: border-box;
-  height: 70vh;
   padding: 0.5rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  overflow: scroll;
 }
 .cards::-webkit-scrollbar {
   display: none;
