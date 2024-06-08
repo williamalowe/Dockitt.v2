@@ -78,7 +78,7 @@ const Navbar = ({ currentTheme, handleSwitch }) => {
           scale: 0.9,
         }}
       >
-        <Link to={"/"}>
+        <Link onClick={() => handleMobClick('Tasks List')} to={"/"}>
           <div>D</div>
         </Link>
       </motion.div>
