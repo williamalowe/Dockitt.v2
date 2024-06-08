@@ -8,6 +8,9 @@
   border: 2px solid var(--text-color);
   border-radius: 0.5rem;
 }
+.dashboard > div > div > canvas {
+  cursor: pointer;
+}
 .left {
   flex: 2;
   display: grid;

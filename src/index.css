@@ -9,7 +9,8 @@
 	--backlog: #FF204E;
 	--in-progress: #7520ff;
 	--under-review: #ffb820;
-	--completed: #20ff75;
+	/* --completed: #20ff75; */
+	--completed: #1adb64;;
 	--cancelled: #e520ff;
 }
 

@@ -5,7 +5,6 @@ import {
   faCaretLeft,
   faCaretRight,
   faCheck,
-  faWeight,
   faX,
 } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";

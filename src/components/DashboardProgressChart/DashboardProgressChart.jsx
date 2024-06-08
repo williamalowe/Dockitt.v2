@@ -9,6 +9,28 @@ const DashboardProgressChart = () => {
 
   return (
     <div className={styles.progressChart}>
+    <AllTasksProgressionBar 
+      backlog={Math.floor(
+        (tasks.filter((task) => task.status === "backlog").length /
+          totalTasks) *
+          100
+      )}
+      inProgress={Math.floor(
+        (tasks.filter((task) => task.status === "in progress").length /
+          totalTasks) *
+          100
+      )}
+      underReview={Math.floor(
+        (tasks.filter((task) => task.status === "under review").length /
+          totalTasks) *
+          100
+      )}
+      completed={Math.floor(
+        (tasks.filter((task) => task.status === "completed").length /
+          totalTasks) *
+          100
+      )}
+    />
       <ProgressionBar
         header="Backlog"
         percentage={Math.floor(
@@ -44,28 +66,6 @@ const DashboardProgressChart = () => {
             100
         )}
         color="var(--completed)"
-      />
-      <AllTasksProgressionBar 
-        backlog={Math.floor(
-          (tasks.filter((task) => task.status === "backlog").length /
-            totalTasks) *
-            100
-        )}
-        inProgress={Math.floor(
-          (tasks.filter((task) => task.status === "in progress").length /
-            totalTasks) *
-            100
-        )}
-        underReview={Math.floor(
-          (tasks.filter((task) => task.status === "under review").length /
-            totalTasks) *
-            100
-        )}
-        completed={Math.floor(
-          (tasks.filter((task) => task.status === "completed").length /
-            totalTasks) *
-            100
-        )}
       />
     </div>
   );

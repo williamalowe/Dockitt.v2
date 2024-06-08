@@ -1,11 +1,13 @@
 #navbar {
   box-sizing: border-box;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   display: flex;
   align-items: center;
   box-shadow: 0 4px 30px var(--bg-primary);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
+  border-bottom: 2px solid var(--text-color);
+  border-top: none;
 }
 #navbar > div:last-child {
   margin-left: auto;
