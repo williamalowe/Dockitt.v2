@@ -6,6 +6,3 @@
   justify-content: center;
   z-index: 100;
 }
-.progressChart > div:first-child {
-  margin-bottom: 3rem;
-}
