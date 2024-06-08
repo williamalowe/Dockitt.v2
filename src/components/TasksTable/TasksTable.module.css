@@ -65,4 +65,7 @@
   .mobile {
     display: flex;
   }
+  .arrow {
+    justify-content: flex-end;
+  }
 }
