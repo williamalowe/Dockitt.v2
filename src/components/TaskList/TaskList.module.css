@@ -50,6 +50,20 @@
 }
 
 @media screen and (max-width: 768px) {
+  .list {
+    flex-direction: row;
+    height: 240px;
+  }
+  .header {
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    border-top-right-radius: 0;
+  }
+  .cards {
+    flex-direction: row;
+  }
+  .cards > div {
+  }
   .arrow {
     justify-content: flex-end;
   }

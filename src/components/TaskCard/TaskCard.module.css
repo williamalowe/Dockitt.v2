@@ -81,3 +81,14 @@
   cursor: pointer;
   color: var(--backlog);
 }
+
+/* Mobile View */
+
+@media screen and (max-width: 768px) {
+  .card {
+    height: 100%;
+  }
+  .lower {
+    margin-top: auto;
+  }
+}

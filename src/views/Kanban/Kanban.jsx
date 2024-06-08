@@ -60,7 +60,7 @@ const Kanban = () => {
           count={tasks.filter((task) => task.status === "cancelled").length}
         />
       </div>
-      <div className={styles.mobile}>
+      {/* <div className={styles.mobile}>
         <div className={styles.buttons}>
           <button onClick={() => handlePrevList()}>
             <FontAwesomeIcon icon={faCaretLeft} />
@@ -208,6 +208,14 @@ const Kanban = () => {
             </motion.div>
           )}
         </AnimatePresence>
+      </div> */}
+      <div className={styles.mobile}>
+      <TaskList
+                header={"Backlog"}
+                color={"var(--backlog)"}
+                tasksList={tasks.filter((task) => task.status === "backlog")}
+                count={tasks.filter((task) => task.status === "backlog").length}
+              />
       </div>
     </>
   );
