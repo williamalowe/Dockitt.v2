@@ -3,6 +3,7 @@ import DashboardProgressChart from '../../components/DashboardProgressChart/Dash
 import DashboardTally from '../../components/DashboardTally/DashboardTally';
 import DoughnutChart from '../../components/DoughnutChart/DoughnutChart';
 import LineChart from '../../components/LineChart/LineChart';
+import UpdatesBoard from '../../components/UpdatesBoard/UpdatesBoard';
 import styles from './Dashboard.module.css';
 
 const Dashboard = () => {
@@ -16,7 +17,7 @@ const Dashboard = () => {
       </div>
       <div className={styles.right}>
         <DashboardTally />
-        <div></div>
+        <UpdatesBoard />
       </div>
     </div>
   )

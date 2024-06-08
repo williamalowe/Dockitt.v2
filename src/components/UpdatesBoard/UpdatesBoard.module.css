@@ -1,0 +1,57 @@
+.updates {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.header {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  background: var(--highlight-color);
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+.updateList {
+  flex-grow: 1;
+  overflow: scroll;
+}
+.updateList::-webkit-scrollbar {
+  display: none;
+}
+.updateList > div:first-child {
+  border-top: 2px solid var(--text-color);
+}
+.update {
+  padding: 0.5rem;
+  border: 2px solid var(--text-color);
+  border-top: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+.profile {
+  aspect-ratio: 1/1;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--text-color);
+  color: var(--bg-primary);
+}
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.updateList > div:last-child {
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
