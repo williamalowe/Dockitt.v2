@@ -10,7 +10,8 @@ import {
 
 import { Bar } from "react-chartjs-2";
 import { useTaskContext } from "../../context/TasksContext/TaskContext";
-
+import styles from './BarChart.module.css';
+ 
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -53,7 +54,7 @@ const BarChart = () => {
     ],
   };
   return (
-    <div>
+    <div className={styles.chart}>
       <Bar options={options} data={data} />
     </div>
   );
