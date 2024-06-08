@@ -34,7 +34,9 @@
   border-radius: 0.5rem;
 }
 .logoContainer > a > div:last-child {
+  margin-left: 0.25rem;
   font-size: 1.2rem;
+  color: var(--highlight-color);
 }
 .linksContainer {
   display: flex;
