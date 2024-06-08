@@ -55,11 +55,14 @@
     max-height: 180px;
   }
   .header {
-    min-width: 100px;
+    max-width: 60px;
     padding: 0.25rem;
     border-top-left-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
     border-top-right-radius: 0;
+  }
+  .header > h5 {
+    transform: rotate(-90deg);
   }
   .display {
     flex-direction: row;
