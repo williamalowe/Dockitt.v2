@@ -13,8 +13,16 @@
   z-index: -1;
 }
 .content {
+  box-sizing: border-box;
   flex-grow: 1;
   margin: 0.5rem;
   padding: 0.5rem;
   border-radius: 0.5rem;
+}
+
+/* Mobile View */
+@media screen and (max-width: 768px) {
+  .app {
+    gap: 0.5rem;
+  }
 }

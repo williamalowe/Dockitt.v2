@@ -21,7 +21,7 @@ const App = () => {
           currentTheme={darkTheme}
           handleSwitch={() => setDarkTheme(!darkTheme)}
         />
-        {/* <OpenModalButton 
+        <OpenModalButton 
           handleClick={() => setShowModal(true)}
         />
         {
@@ -32,7 +32,7 @@ const App = () => {
         }
         <div className={styles.content}>
           <Outlet />
-        </div> */}
+        </div>
       </main>
     </TaskProvider>
   );
