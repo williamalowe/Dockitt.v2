@@ -6,3 +6,11 @@
 .kanban > div {
   flex: 1;
 }
+
+/* Mobile View */
+@media screen and (max-width: 768px) {
+  .kanban {
+    flex-direction: column;
+    gap: 0rem;
+  }
+}
