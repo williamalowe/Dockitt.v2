@@ -24,7 +24,6 @@ const TasksTable = ({ taskslist }) => {
         :
         <div className={styles.empty}> No Items in this list!</div>
       }
-        
       </div>
       <div className={styles.arrow}>
         <FontAwesomeIcon icon={faCaretDown} />
