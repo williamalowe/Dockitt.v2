@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import TableItem from "../TableItem/TableItem";
 import styles from "./TasksTable.module.css";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
-import TaskCard from "../TaskCard/TaskCard";
+import { motion } from "framer-motion";
 
 const TasksTable = ({ taskslist }) => {
   return (
