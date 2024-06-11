@@ -3,6 +3,18 @@ import styles from "./TaskList.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 import TaskCard from "../TaskCard/TaskCard";
+import { animate, motion } from "framer-motion";
+
+const taskItem = {
+  initial: {
+    opacity: 0,
+    x: -10
+  },
+  animate: {
+    opacity: 1,
+    x: 0
+  }
+}
 
 const TaskList = ({ header, color, tasksList, count }) => {
   const headerRef = useRef(0);
@@ -17,11 +29,20 @@ const TaskList = ({ header, color, tasksList, count }) => {
         <h5>{header} - {count}</h5>
       </div>
       <div className={styles.display}>
-        <div className={styles.cards}>
+        <motion.div className={styles.cards}
+          initial='initial'
+          animate='animate'
+          transition={{
+            staggerChildren: 0.2,
+            delayChildren: 0.1
+          }}
+        >
           {
             tasksList.length > 0 ?
           tasksList.map((task) => (
-            <div key={task.date}>
+            <motion.div key={task.date}
+              variants={taskItem}
+            >
               <TaskCard
                 header={task.title}
                 date={task.date}
@@ -30,14 +51,14 @@ const TaskList = ({ header, color, tasksList, count }) => {
                 priority={task.priority}
                 status={task.status}
               />
-            </div>
+            </motion.div>
           ))
           :
                 <div className={styles.empty}>
                   No Tasks
                 </div>
           }
-        </div>
+        </motion.div>
         <div className={styles.arrow}>
           <FontAwesomeIcon icon={faCaretDown} />
         </div>
