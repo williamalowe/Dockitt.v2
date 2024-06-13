@@ -7,7 +7,7 @@
   background: var(--modal-color);
   display: grid;
   place-items: center;
-  z-index: 100;
+  z-index: 200;
 }
 .modal {
   aspect-ratio: 1/1;
@@ -16,6 +16,7 @@
   padding: 0.5rem 2rem;
   border: 2px solid var(--highlight-color);
   border-radius: 0.5rem;
+  z-index: 200;
 }
 
 /* Mobile View */
