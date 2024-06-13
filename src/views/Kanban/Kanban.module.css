@@ -22,5 +22,7 @@
 @media screen and (max-width: 768px) {
   .kanban {
     flex-direction: column;
+    max-height: 80vh;
+    overflow: scroll;
   }
 }
