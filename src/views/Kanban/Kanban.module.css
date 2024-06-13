@@ -6,16 +6,6 @@
 .kanban > div {
   flex: 1;
 }
-.mobile {
-  display: none;
-  gap: 0.5rem;
-  flex-direction: column;
-  overflow: scroll;
-  height: 80vh;
-}
-.mobile::-webkit-scrollbar {
-  display: none;
-}
 .buttons {
   display: flex;
   align-items: center;
@@ -31,9 +21,6 @@
 /* Mobile View */
 @media screen and (max-width: 768px) {
   .kanban {
-    display: none;
-  }
-  .mobile {
-    display: flex;
+    flex-direction: column;
   }
 }
